@@ -1,0 +1,192 @@
+/* Flexbox Grid */
+.row {
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+[class^="col-"] {
+    box-sizing: border-box;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding: 0.5rem;
+}
+
+.row .col-auto {
+/* .col-auto { */ /* Add .row last so .medium will work */
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+}
+
+/* Add very last for demo purposes */
+@media only screen and (min-width: 780px) {
+    .medium [class^="col-"] {
+        -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    .row .col-01 {
+        -ms-flex-preferred-size: 8.3333%;
+        flex-basis: 8.3333%;
+        /* max-width: 8.3333%; */ /* Add after for demo purposes */
+    }
+
+    .row .col-02 {
+        -ms-flex-preferred-size: 16.667%;
+        flex-basis: 16.667%;
+    }
+
+    .row .col-03 {
+        -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    }
+
+    .row .col-04 {
+        -ms-flex-preferred-size: 33.3333%;
+        flex-basis: 33.3333%;
+    }
+
+    .row .col-05 {
+        -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    }
+
+    .row .col-06 {
+        -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    }
+
+    .row .col-07 {
+        -ms-flex-preferred-size: 58.3333%;
+        flex-basis: 58.3333%;
+    }
+
+    .row .col-08 {
+        -ms-flex-preferred-size: 66.6666%;
+        flex-basis: 66.6666%;
+    }
+
+    .row .col-09 {
+        -ms-flex-preferred-size: 75%;
+        flex-basis: 75%;
+    }
+
+    .row .col-10 {
+        -ms-flex-preferred-size: 83.3333%;
+        flex-basis: 83.3333%;
+    }
+
+    .row .col-11 {
+        -ms-flex-preferred-size: 91.6666%;
+        flex-basis: 91.6666%;
+    }
+
+    .row .col-12 {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    }
+
+    .row .offset-01 {
+        margin-left: 8.3333%;
+    }
+
+    .row .offset-02 {
+        margin-left: 16.6666%;
+    }
+
+    .row .offset-03 {
+        margin-left: 25%;
+    }
+
+    .row .offset-04 {
+        margin-left: 33.3333%;
+    }
+
+    .row .offset-05 {
+        margin-left: 41.6666%;
+    }
+
+    .row .offset-06 {
+        margin-left: 50%;
+    }
+
+    .row .offset-07 {
+        margin-left: 58.3333%;
+    }
+
+    .row .offset-08 {
+        margin-left: 66.6666%;
+    }
+
+    .row .offset-09 {
+        margin-left: 75%;
+    }
+
+    .row .offset-10 {
+        margin-left: 83.3333%;
+    }
+
+    .row .offset-11 {
+        margin-left: 91.6666%;
+    }   
+}
+
+.start {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    text-align: start;
+}
+
+.center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.end {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    text-align: end;
+}
+
+.top {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    -ms-grid-row-align: flex-start;
+    align-items: flex-start;
+}
+
+.middle {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+}
+
+.bottom {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    -ms-grid-row-align: flex-end;
+    align-items: flex-end;
+}
